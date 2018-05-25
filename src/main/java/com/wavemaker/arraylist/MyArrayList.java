@@ -211,6 +211,8 @@ public class MyArrayList<T> implements List<T> {
     }
 
     public List<T> subList(int fromIndex, int toIndex) {
+        List<T> l = new MyArrayList<>();
+        if(fromIndex == toIndex)return l;
         validCheck(fromIndex, toIndex);
         rangeCheck(fromIndex);
         /* as toIndex is exclusive just decrement it by 1 so that it become inclusive for rangeCheck.. */
@@ -230,7 +232,7 @@ public class MyArrayList<T> implements List<T> {
     }
 
     private void validCheck(int index1, int index2) {
-        if (index1 >= index2) {
+        if (index1 > index2) {
             throw new IllegalArgumentException("fromIndex :" + index1 + " >" + " toIndex :" + index2);
         }
     }

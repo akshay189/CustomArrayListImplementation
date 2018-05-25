@@ -200,7 +200,7 @@ public class ArrayListTestCases {
         myArrayList.add(1);
 
 //
-        Assert.assertEquals(Arrays.asList(1), myArrayList.subList(0, 0));
+        Assert.assertEquals(Arrays.asList(), myArrayList.subList(0, 0));
         myArrayList.add(2);
         Assert.assertEquals(Arrays.asList(1,2),myArrayList.subList(0,2));
     }
