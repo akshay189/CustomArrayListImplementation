@@ -237,7 +237,6 @@ public class MyArrayList<T> implements List<T> {
         }
     }
 
-    //   TODO  Recheck
     private boolean batchRemove(Collection<?> c, boolean flag) {
         if (c == null)
             throw new NullPointerException("input is null");
@@ -280,7 +279,7 @@ public class MyArrayList<T> implements List<T> {
     }
 
     private void rangeCheck(int index) {
-        if (index < 0 || index >= size)
+        if (index < 0 || index >=size)
             throw new IndexOutOfBoundsException("Index :" + index + " size" + size);
     }
 
@@ -309,6 +308,7 @@ public class MyArrayList<T> implements List<T> {
         }
         return a;
     }
+
     private class Itr implements Iterator<T> {
 
         int cursor = 0, lastReturnedIndex = -1, expectedModcount = modcount;

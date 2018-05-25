@@ -195,10 +195,8 @@ public class ArrayListTestCases {
 //    TODO Check the logic
     @Test
     public void testSubList() {
-
         MyArrayList myArrayList = new MyArrayList();
         myArrayList.add(1);
-
 //
         Assert.assertEquals(Arrays.asList(), myArrayList.subList(0, 0));
         myArrayList.add(2);
